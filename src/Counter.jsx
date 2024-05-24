@@ -1,7 +1,7 @@
-function Counter() {
+function Counter({ count }) {
     return (
         <h1 className="text-center" style={{ fontSize: "150px" }}>
-            0
+            {count}
         </h1>
     );
 }
