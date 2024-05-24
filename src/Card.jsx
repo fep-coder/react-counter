@@ -12,7 +12,7 @@ function Card() {
             <div className="card-body">
                 <Title />
                 <Counter count={count} />
-                <ResetButton />
+                <ResetButton setCount={setCount} />
                 <CountButtons setCount={setCount} />
             </div>
         </div>
