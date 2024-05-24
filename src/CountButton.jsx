@@ -1,10 +1,12 @@
 function CountButton({ locked, type, setCount }) {
-    function handleClick() {
+    function handleClick(e) {
         if (type === "increment") {
             setCount((prevState) => (prevState + 1 > 5 ? 5 : prevState + 1));
         } else if (type === "decrement") {
             setCount((prevState) => (prevState - 1 < 0 ? 0 : prevState - 1));
         }
+
+        e.currentTarget.blur();
     }
 
     return (
