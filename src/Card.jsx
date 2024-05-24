@@ -1,4 +1,5 @@
-import CountButtons from "./CountButtons";
+import ButtonContainer from "./ButtonContainer";
+import CountButton from "./CountButton";
 import Counter from "./Counter";
 import ResetButton from "./ResetButton";
 import Title from "./Title";
@@ -13,7 +14,10 @@ function Card() {
                 <Title />
                 <Counter count={count} />
                 <ResetButton setCount={setCount} />
-                <CountButtons setCount={setCount} />
+                <ButtonContainer>
+                    <CountButton type="decrement" setCount={setCount} />
+                    <CountButton type="increment" setCount={setCount} />
+                </ButtonContainer>
             </div>
         </div>
     );
