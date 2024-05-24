@@ -7,16 +7,25 @@ import { useState } from "react";
 
 function Card() {
     const [count, setCount] = useState(0);
+    const locked = count === 5 ? true : false;
 
     return (
         <div className="card">
             <div className="card-body">
-                <Title />
+                <Title locked={locked} />
                 <Counter count={count} />
                 <ResetButton setCount={setCount} />
                 <ButtonContainer>
-                    <CountButton type="decrement" setCount={setCount} />
-                    <CountButton type="increment" setCount={setCount} />
+                    <CountButton
+                        locked={locked}
+                        type="decrement"
+                        setCount={setCount}
+                    />
+                    <CountButton
+                        locked={locked}
+                        type="increment"
+                        setCount={setCount}
+                    />
                 </ButtonContainer>
             </div>
         </div>
